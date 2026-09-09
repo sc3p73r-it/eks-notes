@@ -14,12 +14,12 @@ Components are categorized as **AWS-managed**, **Kubernetes-native**, **add-ons*
 |------|-------|
 | [01-executive-overview.md](01-executive-overview.md) | Executive overview, benefits, use cases |
 | [02-core-architecture.md](02-core-architecture.md) | EKS control plane, data plane, VPC, traffic flows |
-| [03-cluster-types-compute.md](03-cluster-types-compute.md) | Managed node groups, Auto Mode, Fargate, self-managed, Graviton |
+| [03-cluster-types-compute.md](03-cluster-types-compute.md) | Managed node groups, Auto Mode, EKS Capabilities, Fargate, self-managed, Graviton |
 | [04-networking-deep-dive.md](04-networking-deep-dive.md) | VPC design, CNI, prefix delegation, services, ingress |
 | [05-iam-security.md](05-iam-security.md) | IAM, Access Entries, RBAC, Pod Identity, IRSA |
 | [06-add-ons.md](06-add-ons.md) | CoreDNS, kube-proxy, VPC CNI, EBS/EFS CSI, LB controller |
 | [07-storage-deep-dive.md](07-storage-deep-dive.md) | EBS, EFS, S3 decision matrix, PVCs, snapshots, backup |
-| [08-scaling.md](08-scaling.md) | HPA, VPA, Cluster Autoscaler, Karpenter, PDB |
+| [08-scaling.md](08-scaling.md) | HPA, VPA, KEDA, Cluster Autoscaler, Karpenter, PDB |
 | [09-ingress-application-traffic.md](09-ingress-application-traffic.md) | Traffic flow: DNS → CDN → WAF → ALB → Ingress → Service → Pod |
 | [10-observability.md](10-observability.md) | Metrics, logs, traces, Container Insights, Prometheus, ADOT |
 | [11-monitoring-alerting.md](11-monitoring-alerting.md) | CloudWatch alarms, Prometheus rules, alert routing |
@@ -47,6 +47,7 @@ Components are categorized as **AWS-managed**, **Kubernetes-native**, **add-ons*
 | [33-glossary.md](33-glossary.md) | EKS / Kubernetes / AWS terminology |
 | [34-production-readiness-checklist.md](34-production-readiness-checklist.md) | Pre-launch and periodic review checklist |
 | [35-references.md](35-references.md) | Curated official AWS + Kubernetes references |
+| [36-eks-workshop-guide.md](36-eks-workshop-guide.md) | Hands-on lab guide: workshop paths + module mapping |
 
 ## Notes
 

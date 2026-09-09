@@ -354,6 +354,49 @@ spec:
 
 ---
 
+## KEDA (Kubernetes Event-Driven Autoscaling)
+
+KEDA extends HPA to scale on event sources beyond CPU/memory — e.g., Kafka/Amazon SQS queue depth, Prometheus metrics, Cron schedules, HTTP request rates. It installs a controller in the cluster that creates/mutates an HPA and instructs it to scale based on external `ScaledObject`/`ScaledJob` resources.
+
+```yaml
+# Deploy KEDA
+helm repo add kedacore https://kedacore.github.io/charts
+helm upgrade -i keda kedacore/keda -n keda --create-namespace
+
+# Scale on SQS queue depth
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: sqs-consumer
+  namespace: production
+spec:
+  scaleTargetRef:
+    name: sqs-consumer
+  minReplicaCount: 1
+  maxReplicaCount: 30
+  triggers:
+    - type: aws-sqs-queue
+      metadata:
+        queueURL: https://sqs.us-east-1.amazonaws.com/123456789012/jobs
+        queueLength: "100"
+        awsRegion: us-east-1
+```
+
+**When to use:** queue/message-driven workloads (SQS, Kafka, RabbitMQ), event streams, scheduled bursts (Cron trigger), custom Prometheus metrics. Complements HPA — HPA covers resource metrics, KEDA covers event-driven metrics.
+
+## Cluster Proportional Autoscaler
+
+Scales replicas proportionally to cluster node count (e.g., CoreDNS needs more replicas in large clusters).
+
+```bash
+# Install (example for CoreDNS)
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/cluster-proportional-autoscaler/master/examples/core-dns-autonomous.yaml
+```
+
+**When to use:** cluster-wide reconcilers that scale with cluster size (CoreDNS, metrics-server); not for application workloads.
+
+---
+
 ## Pod Disruption Budgets
 
 ```yaml
@@ -376,6 +419,8 @@ spec:
 | Area | Recommendation |
 |------|----------------|
 | HPA | Set resource requests/limits, use custom metrics |
+| KEDA | Use for event/queue-driven workloads (SQS, Kafka, Cron) |
+| CPA | Scale cluster-wide reconcilers (CoreDNS) with cluster size |
 | VPA | Use in recommendation mode first |
 | Karpenter | Use consolidation for cost savings |
 | PDB | Always define for critical workloads |
@@ -411,4 +456,6 @@ kubectl describe nodes | grep -A5 "Allocated resources"
 - [HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 - [Cluster Autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler)
 - [Karpenter](https://karpenter.sh/docs/)
+- [KEDA](https://keda.sh/)
+- [Cluster Proportional Autoscaler](https://github.com/kubernetes-sigs/cluster-proportional-autoscaler)
 - [EKS Best Practices - Scaling](https://aws.github.io/aws-cloudformation-templates/latest/other-guides/eks-best-practices.html)

@@ -206,7 +206,7 @@ This section provides concise comparison tables for the most important EKS, Kube
 | Compute model | Managed Node Groups + Spot; Auto Mode for SMB; Fargate for serverless |
 | Storage | gp3 EBS for stateful; EFS for shared; S3 for objects |
 | Pod IAM | EKS Pod Identity (new); IRSA for existing |
-| Autoscaling | Karpenter for cluster; HPA for pods; VPA for right-sizing |
+| Autoscaling | Karpenter for cluster; HPA for pods; VPA for right-sizing; KEDA for event-driven |
 | Secrets | Secrets Manager/SSM + External Secrets |
 | Monitoring | Prometheus + Grafana + CloudWatch |
 | IaC | Terraform (multi-cloud) or CloudFormation (AWS-only) |

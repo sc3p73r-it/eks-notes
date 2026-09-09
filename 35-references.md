@@ -16,6 +16,8 @@ Curated list of official AWS, Kubernetes, and partner references for EKS operati
 - [EKS Pod Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html)
 - [IRSA (IAM Roles for Service Accounts)](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)
 - [EKS Auto Mode](https://docs.aws.amazon.com/eks/latest/userguide/automode.html)
+- [EKS Capabilities (managed ACK/Argo CD/kro)](https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-eks-capabilities/)
+- [EKS Hybrid Nodes](https://docs.aws.amazon.com/eks/latest/userguide/hybrid-nodes.html)
 - [EKS Optimized AMIs](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html)
 - [EKS Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)
 - [EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
@@ -59,6 +61,8 @@ Curated list of official AWS, Kubernetes, and partner references for EKS operati
 - [HorizontalPodAutoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 - [VerticalPodAutoscaler](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler)
 - [PodDisruptionBudget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/)
+- [KEDA (event-driven autoscaling)](https://keda.sh/)
+- [Cluster Proportional Autoscaler](https://github.com/kubernetes-sigs/cluster-proportional-autoscaler)
 - [Amazon EC2 Spot](https://aws.amazon.com/ec2/spot/)
 
 ## Observability
@@ -70,12 +74,20 @@ Curated list of official AWS, Kubernetes, and partner references for EKS operati
 - [AWS X-Ray](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html)
 - [Fluent Bit](https://docs.fluentbit.io/manual/)
 - [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
+- [AWS Observability Accelerator (Terraform)](https://aws-observability.github.io/terraform-aws-observability-accelerator/)
+- [CDK AWS Observability Accelerator](https://aws-observability.github.io/cdk-aws-observability-accelerator/)
+- [Kubecost (K8s cost visibility)](https://www.kubecost.com/)
+- [One Observability Workshop](https://catalog.workshops.aws/observability/en-US)
 
 ## CI/CD
 
 - [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [Argo CD](https://argo-cd.readthedocs.io/en/stable/)
 - [Flux](https://fluxcd.io/)
+- [ACK (AWS Controllers for Kubernetes)](https://aws-controllers-k8s.github.io/community/)
+- [Crossplane](https://www.crossplane.io/)
+- [kro (Kube Resource Orchestrator)](https://kro.run/)
+- [Kyverno (policy/security admission)](https://kyverno.io/)
 - [Helm](https://helm.sh/docs/)
 - [Kustomize](https://kustomize.io/)
 - [Amazon ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
@@ -101,6 +113,9 @@ Curated list of official AWS, Kubernetes, and partner references for EKS operati
 - [AWS Well-Architected — Kubernetes workloads](https://docs.aws.amazon.com/wellarchitected/latest/kubernetes-workloads/welcome.html)
 - [EKS Blueprints for Terraform](https://github.com/aws-ia/terraform-aws-eks-blueprints)
 - [Amazon EKS Workshop](https://www.eksworkshop.com/)
+- [EKS Workshop GitHub (aws-samples/eks-workshop-v2)](https://github.com/aws-samples/eks-workshop-v2)
+- [EKS Workshop — Essentials / Fast Paths](https://www.eksworkshop.com/docs/fastpaths/)
+- [Kiro (natural language EKS operations)](https://github.com/awslabs/kiro)
 - [AWS Containers Blog](https://aws.amazon.com/blogs/containers/)
 
 ---

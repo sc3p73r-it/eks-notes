@@ -27,6 +27,7 @@ Alphabetical glossary of important EKS, Kubernetes, and AWS terms.
 - **CIDR** — Classless Inter-Domain Routing notation for IP addresses/subnets (e.g., `10.0.0.0/16`).
 - **CI/CD** — Continuous Integration/Continuous Deployment; automation for building, testing, and deploying.
 - **Cluster Autoscaler** — Kubernetes component that adds/removes nodes (via AWS ASG) based on pending pods.
+- **Cluster Proportional Autoscaler (CPA)** — Scales replicas proportionally to cluster size (e.g., CoreDNS).
 - **CNI (Container Network Interface)** — Standard for Kubernetes networking plugins; EKS uses Amazon VPC CNI by default.
 - **ConfigMap** — Kubernetes resource for non-confidential configuration data.
 - **Container Insights** — AWS CloudWatch feature that collects, aggregates, and summarizes metrics and logs from containers.
@@ -55,6 +56,7 @@ Alphabetical glossary of important EKS, Kubernetes, and AWS terms.
 - **EKS Access Entry** — Modern mechanism to grant IAM principals access to an EKS cluster.
 - **EKS Anywhere** — AWS-managed Kubernetes for on-premises environments.
 - **EKS Auto Mode** — EKS feature that automatically manages compute, storage, and networking.
+- **EKS Capabilities** — Fully managed platform components (ACK, Argo CD, kro) that run on AWS-owned infrastructure instead of on worker nodes.
 - **eksctl** — CLI tool for creating and managing EKS clusters.
 - **ENI (Elastic Network Interface)** — Virtual network interface attached to EC2 instances; pods use ENI secondary IPs with VPC CNI.
 - **etcd** — Distributed key-value store used as Kubernetes' backing store.
@@ -95,6 +97,10 @@ Alphabetical glossary of important EKS, Kubernetes, and AWS terms.
 ## K
 
 - **Karpenter** — Open-source node provisioning tool from AWS; provisions EC2 nodes dynamically for pods.
+- **KEDA (Kubernetes Event-Driven Autoscaling)** — Event-driven pod autoscaling (SQS, Kafka, Cron, Prometheus metrics, etc.).
+- **Kiro CLI** — LLM-driven, natural-language interface for EKS cluster operations.
+- **kro (Kube Resource Orchestrator)** — Control plane that composes Kubernetes/AWS resources into single stacks via `ResourceGraphDefinition`.
+- **Kyverno** — Kubernetes-native admission/policy engine (alternative to OPA Gatekeeper).
 - **Kubeconfig** — Kubernetes configuration file containing cluster/credential context.
 - **kubelet** — Node agent managing pods and containers on each node.
 - **kube-proxy** — Node component maintaining network rules for Kubernetes Services.

@@ -357,6 +357,32 @@ aws eks describe-cluster --name my-cluster \
 
 ---
 
+## EKS Capabilities (Managed Platform Components)
+
+Announced November 2025, **Amazon EKS Capabilities** offload common platform components (ACK, Argo CD, kro) so they run as **fully managed control-plane components on AWS-owned infrastructure** — not on your worker nodes.
+
+| Capability | What it is | Managed by |
+|------------|------------|------------|
+| **ACK** (AWS Controllers for Kubernetes) | Provision AWS resources (DynamoDB, S3, RDS…) via Kubernetes custom resources | AWS |
+| **Argo CD** | GitOps continuous delivery (cluster as deployment target) | AWS |
+| **kro** (Kube Resource Orchestrator) | Compose multiple K8s resources into one via `ResourceGraphDefinition` | AWS |
+
+### How It Differs from Self-Install
+
+| Aspect | Traditional self-install | EKS Capabilities |
+|--------|--------------------------|-------------------|
+| Control plane component | Runs as Deployments on your nodes | Runs on AWS-owned infrastructure |
+| Install | Helm install + controller Deployment + pod-level IRSA | Enabled; capability assumes its own IAM role |
+| Scaling/patching/upgrades | Customer responsibility | AWS responsibility |
+| In-cluster artifacts | Controllers, Deployments, webhooks | Only the CRDs (and any managed namespace) |
+
+### When to Use
+
+- Use **EKS Capabilities** to eliminate platform-tool maintenance (ACK, Argo CD, kro) for production GitOps and AWS resource provisioning.
+- Use self-install when you need custom controller settings, pinned versions, or non-AWS-capability tooling (e.g., Flux, Crossplane).
+
+---
+
 ## AWS Fargate
 
 Fargate is a serverless compute engine for containers that works with both EKS and ECS. With Fargate, there are no nodes to manage; each pod runs in its own isolated microVM.
@@ -531,6 +557,7 @@ aws eks create-nodegroup \
 - [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html)
 - [Fargate](https://docs.aws.amazon.com/eks/latest/userguide/fargate.html)
 - [EKS Auto Mode](https://docs.aws.amazon.com/eks/latest/userguide/automode.html)
+- [EKS Capabilities announcement](https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-eks-capabilities/)
 - [Karpenter](https://karpenter.sh/docs/)
 - [AWS Node Termination Handler](https://github.com/aws/aws-node-termination-handler)
 - [Graviton with EKS](https://github.com/aws/aws-graviton-getting-started)

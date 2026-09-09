@@ -1,7 +1,7 @@
 # Summary
 
 - [Introduction](README.md)
-- [01. Executive Overview](01-executive-overview.md)
+- [Executive Overview](01-executive-overview.md)
 - [02. Core Architecture](02-core-architecture.md)
 - [03. Cluster Types & Compute](03-cluster-types-compute.md)
 - [04. Networking Deep Dive](04-networking-deep-dive.md)

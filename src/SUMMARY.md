@@ -1,0 +1,64 @@
+# Summary
+
+- [Introduction](README.md)
+
+# Part 1 — Foundation
+
+- [01. Executive Overview](01-executive-overview.md)
+- [02. Core Architecture](02-core-architecture.md)
+- [37. EKS Architecture Diagram](37-eks-architecture-diagram.md)
+
+# Part 2 — Compute, Scaling & Storage
+
+- [03. Cluster Types & Compute](03-cluster-types-compute.md)
+- [07. Storage Deep Dive](07-storage-deep-dive.md)
+- [08. Scaling](08-scaling.md)
+- [25. Kubernetes Resources](25-kubernetes-resources.md)
+- [26. Application Deployment Example](26-application-deployment-example.md)
+- [30. Comparison Tables](30-comparison-tables.md)
+
+# Part 3 — Networking & Traffic
+
+- [04. Networking Deep Dive](04-networking-deep-dive.md)
+- [09. Ingress & Application Traffic](09-ingress-application-traffic.md)
+
+# Part 4 — Security & IAM
+
+- [05. IAM & Security](05-iam-security.md)
+- [16. Security Scanning & DevSecOps](16-security-scanning-devsecops.md)
+- [17. Secrets Management](17-secrets-management.md)
+- [18. Encryption](18-encryption.md)
+
+# Part 5 — Observability
+
+- [10. Observability](10-observability.md)
+- [11. Monitoring & Alerting](11-monitoring-alerting.md)
+- [12. Logging Architecture](12-logging-architecture.md)
+- [13. Control Plane Logging](13-control-plane-logging.md)
+
+# Part 6 — CI/CD & Automation
+
+- [14. Deployment & CI/CD](14-deployment-cicd.md)
+- [15. Container Registry (ECR)](15-container-registry-ecr.md)
+- [24. Terraform](24-terraform.md)
+- [36. EKS Workshop Guide](36-eks-workshop-guide.md)
+
+# Part 7 — Production Operations
+
+- [06. Add-ons](06-add-ons.md)
+- [19. High Availability](19-high-availability.md)
+- [20. Disaster Recovery](20-disaster-recovery.md)
+- [21. Upgrades](21-upgrades.md)
+- [22. Extended Support](22-extended-support.md)
+- [23. Cost Optimization](23-cost-optimization.md)
+- [27. Troubleshooting](27-troubleshooting.md)
+- [28. Production Best Practices](28-production-best-practices.md)
+- [31. Standard Operating Procedures](31-sops.md)
+- [34. Production Readiness Checklist](34-production-readiness-checklist.md)
+
+# Part 8 — Reference Material
+
+- [29. Enterprise Reference Architecture](29-enterprise-reference-architecture.md)
+- [32. Command Reference](32-command-reference.md)
+- [33. Glossary](33-glossary.md)
+- [35. References](35-references.md)
